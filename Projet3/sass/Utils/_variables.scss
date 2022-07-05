@@ -1,7 +1,237 @@
-$color-primary: #15DEA5;
-$color-secondary: #001534;
-$color-accent: #D6FFF5;
-$color-white: #fff;
-$color-invalid : #DB464B;
+$police-titre:'Shrikhand', 'Arial', 'Serif';
+$police-texte: 'Roboto', 'Arial', 'Serif';
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
 
-$heading-shadow-size: .55rem;
+@use "sass:color";
+
+@font-face
+{
+  font-family:'Shrikhand';
+  src:url("../../Fonts/Shrikhand/Shrikhand-Regular.ttf")
+}
+
+@font-face
+{
+  font-family:'Roboto';
+  src:url("../../Fonts/Roboto/Roboto-Regular.ttf")
+}
+
+
+@mixin button($type) {
+  border: 0;
+  padding:13px 24px;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 100px;
+  color: white;
+  background-color: black;
+  background-image: linear-gradient(0deg, color.scale($color-primary, $alpha: -10%) 0%, color.scale($color-secondary, $alpha: -10%) 100%);
+  cursor: pointer;
+  box-shadow: 4.5px 4.5px 10px rgba(0, 0, 0, 0.25);
+  transition-duration:200ms;
+
+  &:hover {
+    background-color: white;
+    box-shadow: 4.5px 4.5px 10px rgba(0, 0, 0, 0.50);
+  }
+
+  a 
+  {
+      background-color: none;
+      color:inherit;
+  }
+}
+
+
+@mixin tuto--btn 
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 10px 47px;
+  gap:15px;
+  margin: 15px 20px 15px 30px;
+  border-radius: 20px;
+  box-shadow: 1px 2px 8px 2px #c4c4c4;
+  background-color: #f5f5f5;
+  transition-duration:200ms;
+
+
+
+  &:hover{
+    background-color:#F2EAFB;
+  }
+
+
+  &:hover > .tuto--icon
+  {
+      color:$color-primary;
+  }
+}
+
+
+@mixin tuto--number
+{
+  background-color: #9356dc;
+  color: white;
+  border-radius: 50%;
+  padding: 5px 9px;
+  margin-left: -60px;
+}
+
+
+
+@mixin Homepage--Card
+{
+    padding: 5px;
+    background: white;
+    border-radius: 10px;
+    display:flex;
+    flex-flow: column nowrap;
+    box-shadow: 0 5px 15px 0 rgba(0,0,0,0.2);
+
+      &--thumbnail
+      {
+      flex: 0 0 auto;
+      height: 250px;
+      width:100%;
+      border-radius:10px 10px 0px 0;
+      object-fit: cover;
+      position: relative;
+      }
+
+      &--badge{
+        position:absolute;
+        right:35px;
+        background-color: $color-tertiary;
+        color: darken($color-tertiary, 50%);
+        padding: 9px;
+        margin-top:10px;
+        border-radius: 3px;
+      }
+
+      &--footer
+      {
+        padding:6px;
+        align-items: center;
+        display:flex;
+      }
+
+      &--content
+      {
+      flex: 1 1 auto;
+      display: flex;
+      flex-flow: column nowrap;
+      
+      }
+
+      &--description
+      {
+        flex: 1 0 auto;
+        margin: 0;
+        font-size: 14px; 
+      }
+
+      &--btn
+      {
+        height:36px;
+        width:36px;
+        padding:0;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+      }
+}
+
+@mixin subtitle--line
+{
+  width:40px;
+  border:2px solid $color-tertiary;
+}
+
+
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body, footer
+{
+  margin:0;
+  font-size: 14px;
+  font-family:$police-texte;
+}
+
+
+a
+{
+  color:black;
+  text-decoration: none;
+}
+
+
+.header
+{
+  padding:10px 10px;
+
+  &--logo
+  {
+    margin:0;
+    text-align: center;
+    font-family:'Shrikhand';
+  }
+}
+
+.footer
+{
+  background-color:#353535;
+
+  .container
+  {
+    gap:10px;
+    padding:15px;
+    display:flex;
+    flex-flow: column nowrap;
+  }
+
+  &--logo{
+    font-family:$police-titre;
+    font-size:20px;
+    font-weight:100;
+    color:white;
+  }
+
+  &--list{
+    display:flex;
+    flex-flow:column nowrap;
+    gap:5px;
+    list-style:none;
+  }
+
+  &--link{
+    color:white;
+    text-decoration: none;
+  }
+
+  &--icon{
+    width:20px;
+    height:20px;
+  }
+
+
+  &--ListElement{
+
+    &:first-child,&:nth-child(2)
+    {
+      font-weight:700;
+    }
+  
+  }
+}

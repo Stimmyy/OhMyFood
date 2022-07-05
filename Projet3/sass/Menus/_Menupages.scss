@@ -1,0 +1,98 @@
+.header
+{
+    &--menuheader {
+       position: relative;
+     }
+   
+     &--return {
+        position:absolute;
+        top:25px;
+       display:flex;
+       align-items:center;
+       justify-content:center;
+       font-size: 25px;
+       color: black;
+     }
+}
+
+
+.Restaurant--image
+{
+    max-height:600px;
+    width:100%;
+    object-fit:cover;
+}
+
+.menu
+{
+    z-index: 1;
+    border-radius: 20px 20px 0 0;
+    position:relative;
+    background-color:white;
+    margin-top:-70px;
+    padding:0 15px;
+
+        &--header{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        &--title{
+            padding:10px;
+            font-family:$police-titre;
+        }
+    
+}
+
+
+.line
+{
+    margin-top:1px;
+    @include subtitle--line;
+}
+
+
+section.menuItem
+{
+    display:flex;
+    padding:6px;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px 0 rgba(0,0,0,0.2);
+    margin:15px 0;
+
+
+         &--header
+         {
+         flex: 1 1 auto;
+         display: flex;
+         flex-flow: column nowrap;
+         
+         }
+
+         &--price
+         {
+            height:36px;
+            width:36px;
+            padding:0;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+         }
+}
+
+
+.command
+{
+    display:flex;
+    justify-content: center;
+    padding:30px 0 50px 0;
+
+    &--Btn
+    {
+        @include button(primary);
+    }
+}
