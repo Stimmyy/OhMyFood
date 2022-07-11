@@ -1,18 +1,20 @@
-.header
+.menuheader
 {
-    &--menuheader {
-       position: relative;
-     }
-   
-     &--return {
+    &--logo
+    {
+        display:flex;
+        justify-content: center;
+        margin:auto;
+    }
+
+    &--return
+    {
         position:absolute;
-        top:25px;
-       display:flex;
-       align-items:center;
-       justify-content:center;
-       font-size: 25px;
-       color: black;
-     }
+        top:20px;
+        left:25px;
+
+        font-size:20px;
+    }
 }
 
 
@@ -31,6 +33,7 @@
     background-color:white;
     margin-top:-70px;
     padding:0 15px;
+    
 
         &--header{
             display: flex;
@@ -46,6 +49,11 @@
 }
 
 
+
+
+
+
+
 .line
 {
     margin-top:1px;
@@ -53,7 +61,7 @@
 }
 
 
-section.menuItem
+.menuItem
 {
     display:flex;
     padding:6px;
@@ -63,8 +71,12 @@ section.menuItem
     border-radius: 10px;
     box-shadow: 0 5px 15px 0 rgba(0,0,0,0.2);
     margin:15px 0;
-
-
+    overflow: hidden;
+    cursor: pointer;
+    max-width: 100%;
+    animation: menuload 1000ms ease-in-out;
+    
+  
          &--header
          {
          flex: 1 1 auto;
@@ -82,7 +94,56 @@ section.menuItem
             align-items: center;
             justify-content: center;
          }
+
+
+
+         &--confirmation {
+            background-color: $color-tertiary;
+            padding:12px;
+            margin: -18px -90px -18px 18px;
+            width: 4rem;
+            display:flex;
+            align-items:center;
+            transition-duration: 500ms;
+          }
+        
+          &:hover &--confirmation {
+            margin-right: -1rem;
+          }
+        
+          &--wrapIcon {
+            position:relative;
+            right: -2px;
+            height: 28px;
+            width: 28px;
+            background-color: white;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            border-radius: 100px;
+            transform: rotate(-360deg);
+            transition-delay:100ms;
+            transition-duration: 500ms;
+        
+          }
+        
+          &:hover &--wrapIcon {
+            transform: rotate(0);
+          }
+        
+          &--icon {
+            color: $color-tertiary;
+          }
 }
+
+
+
+@for $i from 0 to 10 {
+    .delay--#{$i} {
+      animation-delay:  #{$i/10}s;
+    }
+  }
+
 
 
 .command
@@ -96,3 +157,6 @@ section.menuItem
         @include button(primary);
     }
 }
+
+
+
