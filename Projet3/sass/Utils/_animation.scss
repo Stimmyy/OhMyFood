@@ -37,7 +37,9 @@
   }
 }
 
-@keyframes fill{
+
+@keyframes fill
+{
     0%{
       opacity:0.4;
     }
@@ -46,12 +48,13 @@
     {
       opacity:1;
     }
-  }
+}
   
-@keyframes menuload{
+@keyframes menuload
+{
 
   0% {
-    margin-top: 23%;
+    margin-top: 100%;
     opacity:0;
   }
   100% {

@@ -30,7 +30,7 @@
     z-index: 1;
     border-radius: 20px 20px 0 0;
     position:relative;
-    background-color:white;
+    background-color:$color-background;
     margin-top:-70px;
     padding:0 15px;
     
@@ -38,7 +38,9 @@
         &--header{
             display: flex;
             align-items: center;
-            justify-content: space-around;
+            justify-content: space-between;
+            margin:0px 10px 0px 10px;
+            padding:5px;
         }
 
         &--title{
@@ -47,12 +49,6 @@
         }
     
 }
-
-
-
-
-
-
 
 .line
 {
@@ -72,6 +68,8 @@
     box-shadow: 0 5px 15px 0 rgba(0,0,0,0.2);
     margin:15px 0;
     overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     cursor: pointer;
     max-width: 100%;
     animation: menuload 1000ms ease-in-out;
@@ -89,6 +87,7 @@
          {
             height:36px;
             width:36px;
+            margin-right:10px;
             padding:0;
             display:flex;
             align-items: center;
@@ -101,14 +100,14 @@
             background-color: $color-tertiary;
             padding:12px;
             margin: -18px -90px -18px 18px;
-            width: 4rem;
+            width: 72px;
             display:flex;
             align-items:center;
             transition-duration: 500ms;
           }
         
           &:hover &--confirmation {
-            margin-right: -1rem;
+            margin-right: -18px;
           }
         
           &--wrapIcon {
@@ -137,13 +136,11 @@
 }
 
 
-
 @for $i from 0 to 10 {
     .delay--#{$i} {
       animation-delay:  #{$i/10}s;
     }
   }
-
 
 
 .command
