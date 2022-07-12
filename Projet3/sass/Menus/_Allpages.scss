@@ -44,38 +44,41 @@
       flex-flow: column nowrap;
     }
   
-    &--logo{
+    &--logo
+    {
       font-family:$police-titre;
       font-size:20px;
       font-weight:100;
       color:white;
     }
   
-    &--list{
+    &--list
+    {
       display:flex;
       flex-flow:column nowrap;
       gap:5px;
       list-style:none;
     }
   
-    &--link{
+    &--link
+    {
       color:white;
       text-decoration: none;
     }
   
-    &--icon{
+    &--icon
+    {
       width:20px;
       height:20px;
     }
   
   
-    &--ListElement{
-  
+    &--ListElement
+    {
       &:first-child,&:nth-child(2)
       {
         font-weight:700;
-      }
-    
+      }  
     }
   }
   

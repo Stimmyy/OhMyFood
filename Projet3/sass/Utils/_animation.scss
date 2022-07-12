@@ -1,6 +1,7 @@
 @keyframes rotate
 {
-  to {
+  to 
+  {
     transform:rotate(360deg);
   }
 }
@@ -40,7 +41,8 @@
 
 @keyframes fill
 {
-    0%{
+    0%
+    {
       opacity:0.4;
     }
   
@@ -53,11 +55,14 @@
 @keyframes menuload
 {
 
-  0% {
+  0% 
+  {
     margin-top: 100%;
     opacity:0;
   }
-  100% {
+
+  100% 
+  {
     margin-top: 0;
     opacity:1;
   }

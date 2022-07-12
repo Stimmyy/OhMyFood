@@ -8,20 +8,19 @@
     }
 
 
-
-
     .tuto
-{
-    display:flex;
-    flex-flow:column nowrap;
-    margin:15px 0 15px 0;
-
-    &--container
     {
         display:flex;
-    }
+        flex-flow:column nowrap;
+        margin:15px 0 15px 0;
 
-        &--list{
+        &--container
+        {
+            display:flex;
+        }
+
+        &--list
+        {
             display:flex;
             flex-flow: row nowrap;
             margin:auto;
@@ -29,14 +28,14 @@
             
         }
 
-        &--item{
+        &--item
+        {
             padding:15px 50px 15px 50px;
             font-size:14px;    
-        }
+        }   
 
-       
+    }
 
-}
 
     .Cards
     {
@@ -44,13 +43,12 @@
         flex-flow:column nowrap;
         gap:1px;
 
-        &--line{
+        &--line
+        {
             display:flex;
             flex-flow:row nowrap;
             margin:1px;
         }
-
-
     
     }
 
@@ -84,30 +82,26 @@
 
 
 
-.menu
-{
-    &--header
+    .menu
     {
-        justify-content: space-between;
+        &--header
+        {
+            justify-content: space-between;
+        }
     }
-}
 
 
-.sous-menus
-{
-    display:flex;
-    flex-flow:row nowrap;
-}
+    .sous-menus
+    {
+        display:flex;
+        flex-flow:row nowrap;
+    }
 
-.sous-menu
-{
-    display:flex;
-    flex-flow: column nowrap;
-    flex:1 1 26%;
-    margin:20px;
-}
-
-
-
-
+    .sous-menu
+    {
+        display:flex;
+        flex-flow: column nowrap;
+        flex:1 1 26%;
+        margin:20px;
+    }
 }
